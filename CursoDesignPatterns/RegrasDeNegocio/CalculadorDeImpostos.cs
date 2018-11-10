@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CursoDesignPatterns
+namespace ExerciciosDesignPatterns
 {
     //Classe que conterá a regra de negócio de cálculo de imposto
     public class CalculadorDeImpostos

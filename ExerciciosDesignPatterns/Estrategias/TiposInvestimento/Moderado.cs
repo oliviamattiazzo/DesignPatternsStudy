@@ -1,11 +1,11 @@
-﻿using CursoDesignPatterns.Interfaces;
+﻿using ExerciciosDesignPatterns.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CursoDesignPatterns.Estrategias.TiposInvestimento
+namespace ExerciciosDesignPatterns.Estrategias.TiposInvestimento
 {
     public class Moderado : TipoInvestimento
     {

@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CursoDesignPatterns.Interfaces
+namespace ExerciciosDesignPatterns
 {
-    public interface TipoInvestimento
+    class Program
     {
-        double Investe(double valorInvestido);
+        static void Main(string[] args)
+        {
+        }
     }
 }

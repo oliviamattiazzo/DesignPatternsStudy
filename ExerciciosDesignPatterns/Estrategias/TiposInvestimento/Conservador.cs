@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CursoDesignPatterns.Interfaces;
+using ExerciciosDesignPatterns.Interfaces;
 
-namespace CursoDesignPatterns.Estrategias.TiposInvestimento
+namespace ExerciciosDesignPatterns.Estrategias.TiposInvestimento
 {
     public class Conservador : TipoInvestimento
     {

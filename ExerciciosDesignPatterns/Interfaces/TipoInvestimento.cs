@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExerciciosDesignPatterns
+namespace ExerciciosDesignPatterns.Interfaces
 {
-    public interface Imposto
+    public interface TipoInvestimento
     {
-        double Calcula(Orcamento orcamento);
+        double Investe(double valorInvestido);
     }
 }
