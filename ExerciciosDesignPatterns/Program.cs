@@ -2,6 +2,7 @@
 using ExerciciosDesignPatterns.Interfaces;
 using ExerciciosDesignPatterns.Modelos;
 using ExerciciosDesignPatterns.RegrasDeNegocio;
+using ExerciciosDesignPatterns.Relatorios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace ExerciciosDesignPatterns
     {
         static void Main(string[] args)
         {
-            ExecutaProcessamentoRequisicao();
+            ExecutaGeracaoRelatorios();
             Console.ReadKey();
         }
 
@@ -48,6 +49,34 @@ namespace ExerciciosDesignPatterns
 
             string retorno = processadorRequisicoes.FormataRetorno(requisicao, conta);
             Console.WriteLine(retorno);
+        }
+
+        /// <summary>
+        /// Conceito de Design Patterns estudado: Template Method
+        /// </summary>
+        public static void ExecutaGeracaoRelatorios()
+        {
+            List<ContaBancaria> contas = new List<ContaBancaria>();
+            ContaBancaria conta1 = new ContaBancaria("Olivia");
+            conta1.Deposita(1000000);
+            contas.Add(conta1);
+            ContaBancaria conta2 = new ContaBancaria("Gertrudes");
+            conta2.Deposita(1000);
+            contas.Add(conta2);
+
+            Console.WriteLine("");
+
+            var relatorioSimples = new Simples();
+            var relatorioComplexo = new Complexo();
+
+            Console.WriteLine("****** RELATÓRIO SIMPLES ******");
+            GeradorDeRelatorios gerador = new GeradorDeRelatorios();
+            gerador.GeraRelatorios(contas, relatorioSimples);
+
+            Console.WriteLine("\n");
+
+            Console.WriteLine("****** RELATÓRIO COMPLEXO ******");
+            gerador.GeraRelatorios(contas, relatorioComplexo);
         }
     }
 }

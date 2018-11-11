@@ -10,6 +10,8 @@ namespace ExerciciosDesignPatterns.Modelos
     {
         public double Saldo { get; private set; }
         public string NomeTitular { get; private set; }
+        public string Agencia { get; private set; } = new Random().Next(1000, 9999).ToString();
+        public string NroConta { get; private set; } = new Random().Next(10000, 99999).ToString();
 
         public ContaBancaria(string nomeTitular)
         {
