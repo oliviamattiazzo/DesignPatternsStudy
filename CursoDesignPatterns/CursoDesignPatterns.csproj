@@ -46,7 +46,11 @@
     <Compile Include="CadeiaDeResponsabilidade\DescontoPorMaisDeQuinhentosReais.cs" />
     <Compile Include="CadeiaDeResponsabilidade\DescontoPorVendaCasada.cs" />
     <Compile Include="CadeiaDeResponsabilidade\SemDesconto.cs" />
+    <Compile Include="Estrategias\ICPP.cs" />
+    <Compile Include="Estrategias\IHIT.cs" />
+    <Compile Include="Estrategias\IKCV.cs" />
     <Compile Include="Interfaces\Desconto.cs" />
+    <Compile Include="MetodoTemplate\TemplateDeImpostoCondicional.cs" />
     <Compile Include="Modelos\Item.cs" />
     <Compile Include="RegrasDeNegocio\CalculadorDeDescontos.cs" />
     <Compile Include="RegrasDeNegocio\CalculadorDeImpostos.cs" />

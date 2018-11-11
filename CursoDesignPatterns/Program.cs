@@ -9,7 +9,7 @@ namespace CursoDesignPatterns
     {
         static void Main(string[] args)
         {
-            
+            ExecutaCalculadorDeImpostosTemplateMethod();
 
             Console.ReadKey();
         }
@@ -17,7 +17,7 @@ namespace CursoDesignPatterns
         /// <summary>
         /// Conceito de Design Patterns estudado: Strategy
         /// </summary>
-        public void ExecutaCalculadorDeImpostos()
+        public static void ExecutaCalculadorDeImpostos()
         {
             Imposto iss = new ISS();
             Imposto icms = new ICMS();
@@ -31,7 +31,7 @@ namespace CursoDesignPatterns
         /// <summary>
         /// Conceito de Design Patterns estudado: Chain of Responsibility
         /// </summary>
-        public void ExecutaCalculadorDeDescontos()
+        public static void ExecutaCalculadorDeDescontos()
         {
             CalculadorDeDescontos calculador = new CalculadorDeDescontos();
 
@@ -45,6 +45,32 @@ namespace CursoDesignPatterns
 
             double desconto = calculador.Calcula(orcamento);
             Console.WriteLine(desconto);
+        }
+
+        /// <summary>
+        /// Conceito de Design Patterns estudado: Template Method
+        /// </summary>
+        public static void ExecutaCalculadorDeImpostosTemplateMethod()
+        {
+            Orcamento orcamentoMenorQue500 = new Orcamento(499);
+            Orcamento orcamentoMaiorQue500 = new Orcamento(501);
+
+            var impostoICPP = new ICPP();
+            var impostoIKCV = new IKCV();
+
+            Console.WriteLine("ICPP e Orcamento menor que R$500");
+            CalculadorDeImpostos calculador = new CalculadorDeImpostos();
+            calculador.RealizaCalculo(orcamentoMenorQue500, impostoICPP);
+
+            Console.WriteLine("ICPP e Orcamento maior que R$500");
+            calculador.RealizaCalculo(orcamentoMaiorQue500, impostoICPP);
+
+            Console.WriteLine("ICKV, Orcamento maior que R$500 e sem item caro (mais de R$100)");
+            calculador.RealizaCalculo(orcamentoMaiorQue500, impostoIKCV);
+
+            Console.WriteLine("ICKV, Orcamento maior que R$500 e com item caro (mais de R$100)");
+            orcamentoMaiorQue500.Itens.Add(new Item("Item caro", 101));
+            calculador.RealizaCalculo(orcamentoMaiorQue500, impostoIKCV);
         }
     }
 }
