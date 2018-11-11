@@ -1,7 +1,6 @@
-﻿using ExerciciosDesignPatterns.Modelos;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace ExerciciosDesignPatterns
+namespace CursoDesignPatterns.Modelos
 {
     public class Orcamento
     {

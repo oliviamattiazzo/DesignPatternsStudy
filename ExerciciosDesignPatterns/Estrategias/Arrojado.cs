@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExerciciosDesignPatterns.Estrategias.TiposInvestimento
+namespace ExerciciosDesignPatterns.Estrategias
 {
     public class Arrojado : TipoInvestimento
     {

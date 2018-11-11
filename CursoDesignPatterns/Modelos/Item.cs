@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExerciciosDesignPatterns.Modelos
+namespace CursoDesignPatterns.Modelos
 {
     public class Item
     {

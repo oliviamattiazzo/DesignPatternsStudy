@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CursoDesignPatterns
+namespace CursoDesignPatterns.Interfaces
 {
-    public interface Imposto
+    public interface Desconto
     {
-        double Calcula(Orcamento orcamento);
+        double Desconta(Orcamento orcamento);
+        Desconto Proximo { get; set; }
     }
 }

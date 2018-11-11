@@ -42,13 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadeiaDeResponsabilidade\DescontoPorCincoItens.cs" />
+    <Compile Include="CadeiaDeResponsabilidade\DescontoPorMaisDeQuinhentosReais.cs" />
+    <Compile Include="CadeiaDeResponsabilidade\DescontoPorVendaCasada.cs" />
+    <Compile Include="CadeiaDeResponsabilidade\SemDesconto.cs" />
+    <Compile Include="Interfaces\Desconto.cs" />
     <Compile Include="Modelos\Item.cs" />
     <Compile Include="RegrasDeNegocio\CalculadorDeDescontos.cs" />
     <Compile Include="RegrasDeNegocio\CalculadorDeImpostos.cs" />
-    <Compile Include="Estrategias\Impostos\ICCC.cs" />
-    <Compile Include="Estrategias\Impostos\ICMS.cs" />
+    <Compile Include="Estrategias\ICCC.cs" />
+    <Compile Include="Estrategias\ICMS.cs" />
     <Compile Include="Interfaces\Imposto.cs" />
-    <Compile Include="Estrategias\Impostos\ISS.cs" />
+    <Compile Include="Estrategias\ISS.cs" />
     <Compile Include="Modelos\Orcamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

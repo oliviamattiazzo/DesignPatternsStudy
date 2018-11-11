@@ -42,13 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Estrategias\TiposInvestimento\Arrojado.cs" />
-    <Compile Include="Estrategias\TiposInvestimento\Conservador.cs" />
-    <Compile Include="Estrategias\TiposInvestimento\Moderado.cs" />
+    <Compile Include="CadeiaDeResponsabilidade\Csv.cs" />
+    <Compile Include="CadeiaDeResponsabilidade\Porcento.cs" />
+    <Compile Include="CadeiaDeResponsabilidade\SemFormato.cs" />
+    <Compile Include="CadeiaDeResponsabilidade\Xml.cs" />
+    <Compile Include="Estrategias\Arrojado.cs" />
+    <Compile Include="Estrategias\Conservador.cs" />
+    <Compile Include="Estrategias\Moderado.cs" />
     <Compile Include="Interfaces\TipoInvestimento.cs" />
+    <Compile Include="Interfaces\RetornoRequisicao.cs" />
     <Compile Include="Modelos\ContaBancaria.cs" />
+    <Compile Include="Modelos\Requisicao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegrasDeNegocio\ProcessamentoDeRequisicao.cs" />
     <Compile Include="RegrasDeNegocio\RealizadorDeInvestimentos.cs" />
   </ItemGroup>
   <ItemGroup>

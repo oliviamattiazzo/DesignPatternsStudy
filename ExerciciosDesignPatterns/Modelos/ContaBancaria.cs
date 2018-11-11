@@ -9,6 +9,12 @@ namespace ExerciciosDesignPatterns.Modelos
     public class ContaBancaria
     {
         public double Saldo { get; private set; }
+        public string NomeTitular { get; private set; }
+
+        public ContaBancaria(string nomeTitular)
+        {
+            NomeTitular = nomeTitular;
+        }
 
         public void Deposita(double valor)
         {

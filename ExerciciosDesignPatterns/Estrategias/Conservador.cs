@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ExerciciosDesignPatterns.Interfaces;
 
-namespace ExerciciosDesignPatterns.Estrategias.TiposInvestimento
+namespace ExerciciosDesignPatterns.Estrategias
 {
     public class Conservador : TipoInvestimento
     {
