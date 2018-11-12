@@ -7,8 +7,24 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    public interface Imposto
+    // 12/11/2018 - Conceito Decorator - Mudei <<interface Imposto>> para <<abstract class Imposto>>
+    public abstract class Imposto
     {
-        double Calcula(Orcamento orcamento);
+        public Imposto OutroImposto { get; set; }
+
+        public Imposto(Imposto outroImposto)
+        {
+            this.OutroImposto = outroImposto;
+        }
+
+        public Imposto() { this.OutroImposto = null; }
+
+        public abstract double Calcula(Orcamento orcamento);
+
+        protected double CalculoDoOutroImposto(Orcamento orcamento)
+        {
+            if (OutroImposto == null) return 0;
+            return OutroImposto.Calcula(orcamento);
+        }
     }
 }

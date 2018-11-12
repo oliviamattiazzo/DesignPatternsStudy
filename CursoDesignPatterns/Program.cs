@@ -9,7 +9,7 @@ namespace CursoDesignPatterns
     {
         static void Main(string[] args)
         {
-            ExecutaCalculadorDeImpostosTemplateMethod();
+            ExecutaCalculadorDeImpostosDecorator();
 
             Console.ReadKey();
         }
@@ -71,6 +71,18 @@ namespace CursoDesignPatterns
             Console.WriteLine("ICKV, Orcamento maior que R$500 e com item caro (mais de R$100)");
             orcamentoMaiorQue500.Itens.Add(new Item("Item caro", 101));
             calculador.RealizaCalculo(orcamentoMaiorQue500, impostoIKCV);
+        }
+
+        /// <summary>
+        /// Conceito de Design Patterns estudado: Decorator
+        /// </summary>
+        public static void ExecutaCalculadorDeImpostosDecorator()
+        {
+            Imposto iss = new ImpostoMuitoAlto(new ICMS());
+            Orcamento orcamento = new Orcamento(500);
+
+            double valor = iss.Calcula(orcamento);
+            Console.WriteLine("Valor dos impostos: " + valor);
         }
     }
 }

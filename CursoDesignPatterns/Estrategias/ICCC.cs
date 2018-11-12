@@ -4,9 +4,12 @@ namespace CursoDesignPatterns.Estrategias
 {
     public class ICCC : Imposto
     {
-        public double Calcula(Orcamento orcamento)
+        public ICCC(Imposto outroImposto) : base(outroImposto) { }
+        public ICCC() : base() { }
+
+        public override double Calcula(Orcamento orcamento)
         {
-            return (orcamento.Valor * DefinePorcentagemICCC(orcamento.Valor)) + DefineAditivoICCC(orcamento.Valor);
+            return (orcamento.Valor * DefinePorcentagemICCC(orcamento.Valor)) + DefineAditivoICCC(orcamento.Valor) + CalculoDoOutroImposto(orcamento);
         }
 
         private double DefinePorcentagemICCC(double valorOrcamento)

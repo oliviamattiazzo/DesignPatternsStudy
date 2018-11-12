@@ -49,6 +49,7 @@
     <Compile Include="Estrategias\ICPP.cs" />
     <Compile Include="Estrategias\IHIT.cs" />
     <Compile Include="Estrategias\IKCV.cs" />
+    <Compile Include="Estrategias\ImpostoMuitoAlto.cs" />
     <Compile Include="Interfaces\Desconto.cs" />
     <Compile Include="MetodoTemplate\TemplateDeImpostoCondicional.cs" />
     <Compile Include="Modelos\Item.cs" />
