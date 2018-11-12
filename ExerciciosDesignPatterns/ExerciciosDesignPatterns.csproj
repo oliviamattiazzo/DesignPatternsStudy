@@ -49,6 +49,10 @@
     <Compile Include="Estrategias\Arrojado.cs" />
     <Compile Include="Estrategias\Conservador.cs" />
     <Compile Include="Estrategias\Moderado.cs" />
+    <Compile Include="Filtros\ContasAbertasNoMesCorrente.cs" />
+    <Compile Include="Filtros\ContasComSaldoMaiorQue500MilReais.cs" />
+    <Compile Include="Filtros\ContasComSaldoMenorQue100Reais.cs" />
+    <Compile Include="Interfaces\Decorator\FiltroContasFraudulentas.cs" />
     <Compile Include="Interfaces\Relatorio.cs" />
     <Compile Include="Interfaces\TipoInvestimento.cs" />
     <Compile Include="Interfaces\RetornoRequisicao.cs" />

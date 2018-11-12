@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    // 12/11/2018 - Conceito Decorator - Mudei <<interface Imposto>> para <<abstract class Imposto>>
+    // 12/11/2018 - Conceito Decorator - Mudei de <<interface Imposto>> para <<abstract class Imposto>>
     public abstract class Imposto
     {
         public Imposto OutroImposto { get; set; }
