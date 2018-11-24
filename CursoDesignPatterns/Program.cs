@@ -9,7 +9,7 @@ namespace CursoDesignPatterns
     {
         static void Main(string[] args)
         {
-            ExecutaCalculadorDeImpostosDecorator();
+            
 
             Console.ReadKey();
         }
@@ -83,6 +83,24 @@ namespace CursoDesignPatterns
 
             double valor = iss.Calcula(orcamento);
             Console.WriteLine("Valor dos impostos: " + valor);
+        }
+
+        /// <summary>
+        /// Conceito de Design Patterns estudado: State
+        /// </summary>
+        public static void ExecutaCalculadoraDeDescontosState()
+        {
+            Orcamento reforma = new Orcamento(500);
+            Console.WriteLine(reforma.Valor);
+
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
+
+            reforma.Aprova();
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
+
+            reforma.Finaliza();
         }
     }
 }
