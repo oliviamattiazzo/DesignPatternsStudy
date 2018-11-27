@@ -9,8 +9,6 @@ namespace CursoDesignPatterns
     {
         static void Main(string[] args)
         {
-            
-
             Console.ReadKey();
         }
 

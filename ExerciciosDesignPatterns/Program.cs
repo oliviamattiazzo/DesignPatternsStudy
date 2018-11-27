@@ -17,7 +17,7 @@ namespace ExerciciosDesignPatterns
     {
         static void Main(string[] args)
         {
-            ExecutaFiltrosContasFraudulentas();
+            ExecutaVerificacaoEstadoConta();
             Console.ReadKey();
         }
 
@@ -106,6 +106,19 @@ namespace ExerciciosDesignPatterns
             {
                 Console.WriteLine("Agencia: " + conta.Agencia + " | Conta: " + conta.NroConta + " | Titular: " + conta.NomeTitular);
             }
+        }
+
+        /// <summary>
+        /// Conceito de Design Patterns estudado: State
+        /// </summary>
+        public static void ExecutaVerificacaoEstadoConta()
+        {
+            ContaBancaria conta = new ContaBancaria("Olivia", DateTime.Today);
+            conta.Deposita(1000);
+            Console.WriteLine("Estado atual da conta: " + conta.Estado);
+            
+            conta.Saca(981);
+            Console.WriteLine("Estado atual da conta: " + conta.Estado);
         }
     }
 }
